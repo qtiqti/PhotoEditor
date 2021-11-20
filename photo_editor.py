@@ -10,6 +10,8 @@ class PyPhotoEditor:
         self.root.title("Photo Editor") # Заголовок окна
         self.root.iconbitmap("resources/icon.jpg")
 
+        self.root.blind("<Escape>",self._close)# команда: при нажатии на escapе закрытие программы
+
     def run(self): # метод, который запускает окно
         self.draw_menu() # метод для прориосовки меню
         self.draw_widgets()  # метод для прорисовки виджетов
@@ -21,4 +23,14 @@ class PyPhotoEditor:
 
     def draw_widgets(self):
         pass
+
+    def _close(self, event): # метод отвечает за закрытие приложения
+        self.root.quit()
+
+
+if __name__=="__main__": #проверяет: является файл запускаемым или импортируемым(если запускаемый, то выполняется условие -->
+    PyPhotoEditor().run()
+
+
+
 
