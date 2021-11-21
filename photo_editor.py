@@ -8,9 +8,9 @@ class PyPhotoEditor:
 
     def init(self): # метод, который инициализирует окно
         self.root.title("Photo Editor") # Заголовок окна
-        self.root.iconbitmap("resources/icon.jpg")
+        #self.root.iconphoto(True, PhotoImage(file="resources/icon.png"))
 
-        self.root.blind("<Escape>",self._close)# команда: при нажатии на escapе закрытие программы
+        self.root.bind("<Escape>",self._close)# команда: при нажатии на escapе закрытие программы
 
     def run(self): # метод, который запускает окно
         self.draw_menu() # метод для прориосовки меню
