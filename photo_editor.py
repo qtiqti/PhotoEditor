@@ -19,7 +19,12 @@ class PyPhotoEditor:
         self.root.mainloop() # Основной цикл программы
 
     def draw_menu(self): # определяем два ранее описанных метода
-        pass
+        menu_bar = Menu(self.root) # каркас меню
+
+        file_menu = Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label="File", menu=file_menu)
+
+        self.root.configure(menu=menu_bar)
 
     def draw_widgets(self):
         pass
